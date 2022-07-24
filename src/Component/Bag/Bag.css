@@ -1,0 +1,36 @@
+.bag {
+  border: 2px solid gold;
+}
+.bag h3 {
+  font-family: "Cinzel", serif;
+}
+.bag h3,
+.bag p {
+  padding-left: 20px;
+}
+.bag img {
+  height: 400px;
+  width: 100%;
+}
+.bag span {
+  font-weight: bold;
+}
+.cart-btn {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.cart-btn button {
+  padding: 10px 30px;
+  font-family: "Cinzel", serif;
+  font-weight: bold;
+  background-color: rgb(222, 183, 84);
+  margin-bottom: 20px;
+  cursor: pointer;
+  border: none;
+}
+
+.cart-btn button:hover {
+  background-color: rgb(219, 167, 35);
+}

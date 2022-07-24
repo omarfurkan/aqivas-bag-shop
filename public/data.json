@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Visuala",
+    "price": 699,
+    "img": "https://img.freepik.com/free-photo/beautiful-elegance-luxury-fashion-green-handbag_1203-7655.jpg?w=740&t=st=1658668861~exp=1658669461~hmac=b326d8b43dbbc03693628941d9bc19e53936ca5fab5debc6c82c1dd00327f171"
+  },
+  {
+    "id": 2,
+    "name": "Anamika",
+    "price": 699,
+    "img": "https://img.freepik.com/free-photo/beautiful-elegance-luxury-fashion-green-handbag_1203-7655.jpg?w=740&t=st=1658668861~exp=1658669461~hmac=b326d8b43dbbc03693628941d9bc19e53936ca5fab5debc6c82c1dd00327f171"
+  },
+  {
+    "id": 3,
+    "name": "Gogro",
+    "price": 971,
+    "img": "https://img.freepik.com/free-photo/beautiful-elegance-luxury-fashion-green-handbag_1203-7655.jpg?w=740&t=st=1658668861~exp=1658669461~hmac=b326d8b43dbbc03693628941d9bc19e53936ca5fab5debc6c82c1dd00327f171"
+  },
+  {
+    "id": 4,
+    "name": "Boson",
+    "price": 9632,
+    "img": "https://img.freepik.com/free-photo/beautiful-elegance-luxury-fashion-green-handbag_1203-7655.jpg?w=740&t=st=1658668861~exp=1658669461~hmac=b326d8b43dbbc03693628941d9bc19e53936ca5fab5debc6c82c1dd00327f171"
+  },
+  {
+    "id": 5,
+    "name": "kilgo",
+    "price": 3970,
+    "img": "https://img.freepik.com/free-photo/beautiful-elegance-luxury-fashion-green-handbag_1203-7655.jpg?w=740&t=st=1658668861~exp=1658669461~hmac=b326d8b43dbbc03693628941d9bc19e53936ca5fab5debc6c82c1dd00327f171"
+  },
+  {
+    "id": 6,
+    "name": "Anbolana",
+    "price": 999,
+    "img": "https://img.freepik.com/free-photo/beautiful-elegance-luxury-fashion-green-handbag_1203-7655.jpg?w=740&t=st=1658668861~exp=1658669461~hmac=b326d8b43dbbc03693628941d9bc19e53936ca5fab5debc6c82c1dd00327f171"
+  },
+  {
+    "id": 7,
+    "name": "Valeneki",
+    "price": 1199,
+    "img": "https://img.freepik.com/free-photo/beautiful-elegance-luxury-fashion-green-handbag_1203-7655.jpg?w=740&t=st=1658668861~exp=1658669461~hmac=b326d8b43dbbc03693628941d9bc19e53936ca5fab5debc6c82c1dd00327f171"
+  },
+  {
+    "id": 8,
+    "name": "Chipu",
+    "price": 329,
+    "img": "https://img.freepik.com/free-photo/beautiful-elegance-luxury-fashion-green-handbag_1203-7655.jpg?w=740&t=st=1658668861~exp=1658669461~hmac=b326d8b43dbbc03693628941d9bc19e53936ca5fab5debc6c82c1dd00327f171"
+  },
+  {
+    "id": 9,
+    "name": "Visloko",
+    "price": 697,
+    "img": "https://img.freepik.com/free-photo/beautiful-elegance-luxury-fashion-green-handbag_1203-7655.jpg?w=740&t=st=1658668861~exp=1658669461~hmac=b326d8b43dbbc03693628941d9bc19e53936ca5fab5debc6c82c1dd00327f171"
+  },
+  {
+    "id": 10,
+    "name": "kimpo",
+    "price": 899,
+    "img": "https://img.freepik.com/free-photo/beautiful-elegance-luxury-fashion-green-handbag_1203-7655.jpg?w=740&t=st=1658668861~exp=1658669461~hmac=b326d8b43dbbc03693628941d9bc19e53936ca5fab5debc6c82c1dd00327f171"
+  },
+  {
+    "id": 11,
+    "name": "kola",
+    "price": 699,
+    "img": "https://img.freepik.com/free-photo/beautiful-elegance-luxury-fashion-green-handbag_1203-7655.jpg?w=740&t=st=1658668861~exp=1658669461~hmac=b326d8b43dbbc03693628941d9bc19e53936ca5fab5debc6c82c1dd00327f171"
+  },
+  {
+    "id": 12,
+    "name": "Kanak",
+    "price": 1699,
+    "img": "https://img.freepik.com/free-photo/beautiful-elegance-luxury-fashion-green-handbag_1203-7655.jpg?w=740&t=st=1658668861~exp=1658669461~hmac=b326d8b43dbbc03693628941d9bc19e53936ca5fab5debc6c82c1dd00327f171"
+  }
+]
