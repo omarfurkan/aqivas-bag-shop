@@ -1,6 +1,7 @@
 .carts {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 3fr 6fr 1fr;
+
   align-items: center;
   justify-items: center;
   border-bottom: 1px solid gold;
@@ -13,4 +14,13 @@
 }
 .carts h4 {
   text-align: center;
+}
+
+.delete-btn button {
+  border: none;
+  background-color: transparent;
+}
+.delete-btn button:hover {
+  color: white;
+  cursor: pointer;
 }

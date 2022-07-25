@@ -2,11 +2,41 @@ import React, { useEffect, useState } from 'react';
 import Bag from '../Bag/Bag';
 import Cart from '../Cart/Cart';
 import './Shop.css'
+import Modal from 'react-modal';
+
+const customStyles = {
+    content: {
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)',
+    },
+};
+
+Modal.setAppElement('#root');
+
+
+
 
 const Shop = () => {
     const [bags, setBags] = useState([]);
     const [selectedItem, setSelectedItem] = useState([])
     const [chooseOne, setChooseOne] = useState({});
+    const [modalOpen, setmodalOpen] = useState(false);
+
+
+    useEffect(() => {
+        if (selectedItem.length >= 4) {
+            setmodalOpen(true)
+        }
+    }, [selectedItem])
+
+
+
+
+
     useEffect(() => {
         fetch("data.json")
             .then(res => res.json())
@@ -14,9 +44,20 @@ const Shop = () => {
     }, []);
 
     const handleCart = (product) => {
-        // console.log(product);
-        const newItem = [...selectedItem, product];
-        setSelectedItem(newItem);
+        if (selectedItem.length < 4) {
+
+            const newItem = [...selectedItem, product];
+
+
+            setSelectedItem(newItem)
+
+
+        }
+
+
+
+
+
 
     }
 
@@ -25,39 +66,67 @@ const Shop = () => {
         setChooseOne(randomItem)
     }
 
+    const handleRemove = () => {
+        setSelectedItem([]);
+        setChooseOne({})
+    }
+
+    const handleDelete = (item) => {
+        const deleted = selectedItem.filter(selectedOne => (selectedOne.id !== item.id));
+        setSelectedItem(deleted)
+
+    }
 
 
 
     return (
-        <div className='shop-container'>
-            <div className='product-container'>
-                <p>product</p>
-                <p>{bags.length}</p>
+        <>
+            <div className='shop-container'>
+                <div className='product-container'>
+                    <p>product</p>
+                    <p>{bags.length}</p>
 
-                <div className='bags'>
-                    {bags.map(bag => <Bag
-                        key={bag.id}
-                        bag={bag}
-                        handleCart={handleCart} />)}
+                    <div className='bags'>
+                        {bags.map(bag => <Bag
+                            key={bag.id}
+                            bag={bag}
+                            handleCart={handleCart}
+                        />)}
+                    </div>
+
+                </div>
+
+                <div className='cart-contaier'>
+                    <div className='position-cart'>
+                        <p>Choosen for you  <span className='choose-text'>{chooseOne.name} </span> </p>
+
+                        <p>product Selected:{selectedItem.length} </p>
+                        <div className='selected-itam'>
+                            {selectedItem.map(item => <Cart
+                                key={item.id}
+                                item={item}
+                                handleDelete={handleDelete}
+                            />)}
+                        </div>
+                        <div className='choose-btn'>
+                            <button onClick={handleRandomOne} disabled={selectedItem.length < 2}>Choose 1 for me</button>
+                            <button onClick={handleRemove} disabled={selectedItem.length < 1}>Remove All</button>
+                        </div>
+                    </div>
                 </div>
 
             </div>
-            <div className='cart-contaier'>
+            <Modal
+                isOpen={modalOpen}
 
-                <p>Choosen for you  <span className='choose-text'>{chooseOne.name} </span> </p>
-
-                <p>product Selected:{selectedItem.length} </p>
-                <div className='selected-itam'>
-                    {selectedItem.map(item => <Cart
-                        key={item.id}
-                        item={item}
-                    />)}
-                </div>
-                <div className='choose-btn'>
-                    <button onClick={handleRandomOne}>Choose 1 for me</button>
-                </div>
-            </div>
-        </div>
+                // onRequestClose={closeModal}
+                style={customStyles}
+                contentLabel="Example Modal"
+            >
+                <h3>Can't add more than 4 product</h3>
+                <button onClick={() => setmodalOpen(false)}>x</button>
+            </Modal>
+        </>
     );
 };
 

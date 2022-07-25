@@ -12,6 +12,15 @@
   gap: 25px;
 }
 
+.cart-contaier {
+  position: relative;
+  width: auto;
+}
+
+.position-cart {
+  position: fixed;
+}
+
 .selected-itam {
   border: 1px solid gold;
 }
@@ -19,10 +28,11 @@
 .choose-btn {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  margin-top: 40px;
 }
 
 .choose-btn button {
-  margin-top: 20px;
   padding: 10px 20px;
   font-family: "Cinzel", serif;
   font-weight: bold;
@@ -35,6 +45,11 @@
 .choose-btn button:hover {
   background-color: rgb(219, 167, 35);
   color: white;
+}
+
+.choose-btn button[disabled]:hover {
+  background-color: rgb(222, 183, 84);
+  color: #a08540;
 }
 
 .choose-text {
