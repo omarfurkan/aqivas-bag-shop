@@ -26,16 +26,11 @@ const Shop = () => {
     const [chooseOne, setChooseOne] = useState({});
     const [modalOpen, setmodalOpen] = useState(false);
 
-
     useEffect(() => {
         if (selectedItem.length >= 4) {
             setmodalOpen(true)
         }
     }, [selectedItem])
-
-
-
-
 
     useEffect(() => {
         fetch("data.json")
@@ -44,20 +39,16 @@ const Shop = () => {
     }, []);
 
     const handleCart = (product) => {
-        if (selectedItem.length < 4) {
+        let newItem = []
+        const exist = selectedItem.find(findItem => findItem.id == product.id)
 
-            const newItem = [...selectedItem, product];
-
-
+        if (!exist && selectedItem.length < 4) {
+            newItem = [...selectedItem, product];
             setSelectedItem(newItem)
-
-
         }
-
-
-
-
-
+        else {
+            window.alert('cant select same item twice')
+        }
 
     }
 

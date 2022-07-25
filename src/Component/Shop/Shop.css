@@ -55,3 +55,25 @@
 .choose-text {
   font-weight: bold;
 }
+
+@media only screen and (max-width: 600px) {
+  .shop-container {
+    margin: 0;
+    margin-right: 0px;
+
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .product-container {
+    order: 2;
+  }
+  .cart-contaier {
+    order: 1;
+  }
+  .position-cart {
+    position: static;
+  }
+  .bags {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 25px;
+  }
+}
