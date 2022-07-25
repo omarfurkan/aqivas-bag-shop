@@ -22,7 +22,7 @@
 }
 
 .cart-btn button {
-  padding: 10px 30px;
+  padding: 10px 20px;
   font-family: "Cinzel", serif;
   font-weight: bold;
   background-color: rgb(222, 183, 84);
@@ -33,4 +33,14 @@
 
 .cart-btn button:hover {
   background-color: rgb(219, 167, 35);
+  color: white;
+}
+
+.cart-btn button {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.icon {
+  font-size: 20px;
 }

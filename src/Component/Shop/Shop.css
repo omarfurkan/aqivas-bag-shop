@@ -11,3 +11,32 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
 }
+
+.selected-itam {
+  border: 1px solid gold;
+}
+
+.choose-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.choose-btn button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-family: "Cinzel", serif;
+  font-weight: bold;
+  background-color: rgb(222, 183, 84);
+  margin-bottom: 20px;
+  cursor: pointer;
+  border: none;
+}
+
+.choose-btn button:hover {
+  background-color: rgb(219, 167, 35);
+  color: white;
+}
+
+.choose-text {
+  font-weight: bold;
+}

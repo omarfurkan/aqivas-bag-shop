@@ -1,0 +1,16 @@
+.carts {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  justify-items: center;
+  border-bottom: 1px solid gold;
+  background-color: rgb(219, 167, 35);
+}
+
+.carts img {
+  width: 100%;
+  height: 63px;
+}
+.carts h4 {
+  text-align: center;
+}

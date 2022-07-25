@@ -1,7 +1,10 @@
 import React from 'react';
+import { BsFillCartFill } from "react-icons/bs";
 import './Bag.css'
 
-const Bag = ({ bag }) => {
+const Bag = ({ bag, handleCart }) => {
+
+
     return (
         <div className='bag'>
             <img src={bag.img} alt="" />
@@ -9,10 +12,10 @@ const Bag = ({ bag }) => {
             <p>Id: {bag.id}</p>
             <p>Price <span>${bag.price}</span></p>
             <div className='cart-btn'>
-                <button >Add to Cart</button>
+                <button onClick={() => handleCart(bag)}>Add to Cart <BsFillCartFill className='icon' /></button>
             </div>
 
-        </div>
+        </div >
     );
 };
 
