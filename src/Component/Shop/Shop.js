@@ -3,6 +3,7 @@ import Bag from '../Bag/Bag';
 import Cart from '../Cart/Cart';
 import './Shop.css'
 import Modal from 'react-modal';
+import { addToLocalStorage, getFromLocalStorage, clearAllLocalStorage } from '../Utilities/Utilities';
 
 const customStyles = {
     content: {
@@ -26,6 +27,8 @@ const Shop = () => {
     const [chooseOne, setChooseOne] = useState({});
     const [modalOpen, setmodalOpen] = useState(false);
 
+    // console.log(bags)
+
     useEffect(() => {
         if (selectedItem.length >= 4) {
             setmodalOpen(true)
@@ -38,13 +41,36 @@ const Shop = () => {
             .then(data => setBags(data))
     }, []);
 
+    useEffect(() => {
+        if (bags.length) {
+            const storedCartId = getFromLocalStorage();
+
+            const previousCart = [];
+            for (const id in storedCartId) {
+                const foundbag = bags.find(bag => bag.id == id);
+
+                if (foundbag) {
+                    previousCart.push(foundbag)
+                }
+            }
+
+            setSelectedItem(previousCart)
+            // console.log(storedCartId)
+        }
+
+    }, [bags])
+
+
+
+
     const handleCart = (product) => {
         let newItem = []
-        const exist = selectedItem.find(findItem => findItem.id == product.id)
+        const exist = selectedItem.find(findItem => findItem.id === product.id)
 
         if (!exist && selectedItem.length < 4) {
             newItem = [...selectedItem, product];
             setSelectedItem(newItem)
+            addToLocalStorage(product.id);
         }
         else {
             window.alert('cant select same item twice')
@@ -60,15 +86,15 @@ const Shop = () => {
     const handleRemove = () => {
         setSelectedItem([]);
         setChooseOne({})
+        clearAllLocalStorage();
     }
 
     const handleDelete = (item) => {
+        console.log(item)
         const deleted = selectedItem.filter(selectedOne => (selectedOne.id !== item.id));
         setSelectedItem(deleted)
 
     }
-
-
 
     return (
         <>

@@ -1,5 +1,6 @@
 
 import './App.css';
+import QA from './Component/QA/QA';
 import Shop from './Component/Shop/Shop';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div>
       <h1 className='title-text'>Aqivas</h1>
       <Shop></Shop>
+      <QA></QA>
     </div>
   );
 }
